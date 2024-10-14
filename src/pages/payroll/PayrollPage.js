@@ -125,8 +125,6 @@ function PayrollPage({
       editedPayroll?.name
       && editedPayroll?.paymentPlan
       && editedPayroll?.paymentCycle
-      && editedPayroll?.dateValidFrom
-      && editedPayroll?.dateValidTo
       && editedPayroll?.paymentMethod
       && !editedPayroll?.isDeleted) return false;
     return true;

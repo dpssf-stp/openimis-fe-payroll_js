@@ -115,17 +115,6 @@ class PayrollHeadPanel extends FormPanel {
           </Grid>
           <Grid item xs={3} className={classes.item}>
             <PublishedComponent
-              pubRef="payroll.PaymentPointPicker"
-              withLabel
-              withPlaceholder
-              filterLabels={false}
-              onChange={(paymentPoint) => this.updateAttribute('paymentPoint', paymentPoint)}
-              value={payroll?.paymentPoint}
-              readOnly={readOnly}
-            />
-          </Grid>
-          <Grid item xs={3} className={classes.item}>
-            <PublishedComponent
               pubRef="paymentCycle.PaymentCyclePicker"
               withLabel
               required
@@ -154,28 +143,6 @@ class PayrollHeadPanel extends FormPanel {
               value={!!payroll?.paymentMethod && payroll.paymentMethod}
               onChange={(paymentMethod) => this.updateAttribute('paymentMethod', paymentMethod)}
               label={formatMessage(intl, 'payroll', 'paymentMethod')}
-            />
-          </Grid>
-          <Grid item xs={3} className={classes.item}>
-            <PublishedComponent
-              pubRef="core.DatePicker"
-              module="payroll"
-              label="dateValidFrom"
-              required
-              value={payroll.dateValidFrom ? payroll.dateValidFrom : null}
-              onChange={(v) => this.updateAttribute('dateValidFrom', v)}
-              readOnly={readOnly}
-            />
-          </Grid>
-          <Grid item xs={3} className={classes.item}>
-            <PublishedComponent
-              pubRef="core.DatePicker"
-              module="payroll"
-              label="dateValidTo"
-              required
-              value={payroll.dateValidTo ? payroll.dateValidTo : null}
-              onChange={(v) => this.updateAttribute('dateValidTo', v)}
-              readOnly={readOnly}
             />
           </Grid>
         </Grid>
