@@ -90,22 +90,6 @@ function PayrollFilter({
       </Grid>
       <Grid item xs={3} className={classes.item}>
         <PublishedComponent
-          pubRef="payroll.PaymentPointPicker"
-          withLabel
-          withPlaceholder
-          filters={filters}
-          value={filterValue('paymentPoint_Id')}
-          onChange={(paymentPoint) => onChangeFilters([
-            {
-              id: 'paymentPoint_Id',
-              value: paymentPoint,
-              filter: `paymentPoint_Id: "${paymentPoint?.id && decodeId(paymentPoint.id)}"`,
-            },
-          ])}
-        />
-      </Grid>
-      <Grid item xs={3} className={classes.item}>
-        <PublishedComponent
           pubRef="paymentCycle.PaymentCyclePicker"
           withLabel
           withPlaceholder
